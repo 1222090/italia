@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Iniciar Sesión</title>
+<style>
+body { background: #ffe4ec; font-family:'Georgia', cursive; text-align:center; padding:50px;}
+input { padding:10px; margin:10px; border-radius:8px; border:1px solid #e91e63; }
+button { padding:10px 20px; margin:10px; border:none; border-radius:10px; background:white; color:#e91e63; cursor:pointer; font-weight:bold;}
+button:hover { background:#fff; transform:scale(1.05);}
+</style>
+</head>
+<body>
+<h1>Iniciar Sesión / Crear Usuario</h1>
+<input type="text" id="usuario" placeholder="Nombre de usuario"><br>
+<input type="password" id="clave" placeholder="Contraseña"><br>
+<button onclick="iniciarSesion()">Iniciar Sesión</button>
+<button onclick="crearUsuario()">Crear Usuario</button>
+
+<script>
+function iniciarSesion(){
+  const nombre=document.getElementById('usuario').value;
+  const clave=document.getElementById('clave').value;
+  if(nombre && clave){
+    localStorage.setItem('usuario',nombre);
+    localStorage.setItem('clave',clave);
+    alert('Sesión iniciada');
+    location.href='index.html';
+  } else alert('Ingrese usuario y contraseña');
+}
+function crearUsuario(){
+  const nombre=document.getElementById('usuario').value;
+  const clave=document.getElementById('clave').value;
+  if(nombre && clave){
+    localStorage.setItem('usuario',nombre);
+    localStorage.setItem('clave',clave);
+    alert('Usuario creado y sesión iniciada');
+    location.href='index.html';
+  } else alert('Ingrese usuario y contraseña');
+}
+</script>
+</body>
+</html>
