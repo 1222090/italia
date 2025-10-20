@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Juego de Vocabulario</title>
+<style>
+body { background:#fff0f6; text-align:center; font-family:'Georgia', cursive; padding:20px;}
+h1 { color:#e91e63; margin-bottom:10px;}
+.button { margin:10px; padding:12px 30px; font-size:18px; border-radius:10px; border:none; background:white; color:#e91e63; cursor:pointer;}
+.button:hover { background:#ffe4ec; transform:scale(1.05);}
+#resultado { font-weight:bold; margin-top:15px; }
+</style>
+</head>
+<body>
+
+<h1>🎉 Juego de Vocabulario 🎉</h1>
+<div id="pregunta"></div>
+<button class="button"></button>
+<button class="button"></button>
+<button class="button"></button>
+<div id="resultado"></div>
+<button class="button" onclick="location.href='curso.html'">Volver al curso</button>
+
+<script>
+const preguntas = [
+  {preg:'🍎 = ?', respuestas:['Cane','Mela','Pizza'], correcta:'Mela'},
+  {preg:'🐶 = ?', respuestas:['Cane','Mela','Gatto'], correcta:'Cane'},
+  {preg:'🍕 = ?', respuestas:['Pizza','Pane','Formaggio'], correcta:'Pizza'}
+];
+let indice=0;
+
+function mostrarPregunta(){
+  const p=preguntas[indice];
+  document.getElementById('pregunta').textContent=p.preg;
+  const botones=document.querySelectorAll('.button');
+  for(let i=0;i<3;i++){
+    botones[i
