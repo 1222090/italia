@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Curso de Italiano</title>
+<style>
+body { background-color: #ffe4ec; margin:0; font-family:'Georgia', cursive; text-align: center; padding: 20px; }
+h1 { color:#e91e63; font-size: 50px; margin-bottom: 30px; }
+.emoji { font-size: 40px; display:inline-block; animation: flotar 4s ease-in-out infinite alternate; margin: 0 6px; }
+@keyframes flotar { 0% { transform: translateY(0px) rotate(0deg);} 50% { transform: translateY(-15px) rotate(15deg);} 100% { transform: translateY(0px) rotate(-15deg);} }
+.button-juego { display: inline-block; margin: 20px; padding: 20px 50px; font-size: 24px; border-radius: 15px; border:none; background-color:white; color:#e91e63; cursor:pointer; font-weight:bold; transition: all 0.2s ease; box-shadow: 0 5px 20px rgba(0,0,0,0.12); }
+.button-juego:hover { transform: scale(1.05); background-color:#ffe4ec; }
+.button-inicio { display:block; margin: 40px auto 0; padding: 15px 40px; font-size:20px; border-radius:12px; border:none; background:white; color:#e91e63; cursor:pointer; font-weight:bold; }
+.button-inicio:hover { background:#ffe4ec; transform: scale(1.05); }
+</style>
+</head>
+<body>
+
+<h1>🎀❤️ Curso de Italiano ❤️🎀</h1>
+<div>
+  <span class="emoji">🎀</span>
+  <span class="emoji">💖</span>
+  <span class="emoji">🎵</span>
+  <span class="emoji">🍝</span>
+  <span class="emoji">💌</span>
+</div>
+
+<div>
+  <button class="button-juego" onclick="location.href='juego1.html'">Juego de Vocabulario</button>
+  <button class="button-juego" onclick="location.href='juego2.html'">Juego de Gramática</button>
+  <button class="button-juego" onclick="location.href='juego3.html'">Juego de Frases</button>
+</div>
+
+<button class="button-inicio" onclick="location.href='index.html'">Volver al inicio</button>
+
+</body>
+</html>
